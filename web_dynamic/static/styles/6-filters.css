@@ -92,7 +92,9 @@
 .container .filters .popover li {
 	margin: 5px 0 5px 0;
 }
-
+.popover li input {
+        margin-right: 10px;
+}
 @media screen and (max-width: 600px) {
 
 	.container .filters {
