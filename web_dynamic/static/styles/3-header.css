@@ -12,7 +12,7 @@ header {
 	width: 100%;
 	border-bottom: 1px solid #CCCCCC;
 }
-header div {
+#api_status {
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -21,6 +21,6 @@ header div {
     margin-right: 30px;
     transform: translateY(40%)
 }
-.available {
+div#api_status.available {
     background-color: #ff545f;
 }
