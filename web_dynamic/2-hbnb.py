@@ -30,8 +30,8 @@ def hbnb_filters(the_id=None):
     """
     handles request to custom template with states, cities & amentities
     """
-    status = requests.get("http://0.0.0.0:5001/api/v1/status/")
-    print(status)
+    resp = requests.get("http://0.0.0.0:5001/api/v1/status/")
+    status = resp.status_code
     cache_id = uuid.uuid4()
     state_objs = storage.all('State').values()
     states = dict([state.name, state] for state in state_objs)
@@ -43,7 +43,9 @@ def hbnb_filters(the_id=None):
                            states=states,
                            amens=amens,
                            places=places,
-                           users=users, cache_id=cache_id)
+                           users=users,
+                           status=status,
+                           cache_id=cache_id)
 
 if __name__ == "__main__":
     """

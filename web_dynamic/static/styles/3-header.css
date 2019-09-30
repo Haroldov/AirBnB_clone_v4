@@ -13,4 +13,14 @@ header {
 	border-bottom: 1px solid #CCCCCC;
 }
 header div {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #cccccc;
+    float: right;
+    margin-right: 30px;
+    transform: translateY(40%)
+}
+.available {
+    background-color: #ff545f;
 }
